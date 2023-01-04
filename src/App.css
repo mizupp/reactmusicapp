@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0;
+	width: 100%;
+  }
+
+h2{
+	color:red;
+}
+button {
+	background-color: rgba(100, 100, 100, 0.721);
+	border: none;
+	color: rgb(30, 30, 30);
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	border-radius: 50%;
+  }
+  
+
+
