@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AlbumItem from "./AlbumItem";
 // import Album from "./Album";
 
 function AlbumList({ albums, updateAlbums }) {
  
+    const [album, setAlbum] = useState([]);
+
+    // useEffect(() => {
+
+    // })
+
+    useEffect(() => {
+        async function fetchAlbum() {
+            const response = await fetch('https://api.discogs.com/artists/1/releases?page=2&per_page=75');
+            const fetchedAlbum = await response.json(response);
+        return() => {
+            console.log(fetchedAlbum);
+            setAlbum(fetchedAlbum);        
+        }
+    }}, []);
+    
+
     const [initialAlbums, setInitialAlbums] = useState([
         {name: 'Kill-Bill', release: "2022", cover: "https://images.genius.com/ec5545d6bd431f045dc8db673b27546d.1000x1000x1.png"},
         {name: 'Anti-Hero', release: "2022", cover: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Taylor_Swift_-_Anti-Hero.png/220px-Taylor_Swift_-_Anti-Hero.png"},
@@ -16,12 +33,14 @@ function AlbumList({ albums, updateAlbums }) {
     const renderAlbums = () => initialAlbums.map(album => <AlbumItem album={album} updateAlbums={updateAlbums} />)
 
     return (
-        <div>
+        <div className="album-list">
             {renderAlbums()}
             {albums.map((album) => {
-                return <AlbumItem album={album} updateAlbums={updateAlbums} />
+                return <AlbumItem album={album} updateAlbums={updateAlbums} key={album.id} />
             })}
         </div>
     );
+
+
 }
 export default AlbumList;

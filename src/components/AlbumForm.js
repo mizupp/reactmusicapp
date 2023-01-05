@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./albumform.css"
 
 function AlbumForm({ addAlbum, albums }) {
     const [albumInfo, setAlbumInfo] = useState({
@@ -24,13 +25,13 @@ function AlbumForm({ addAlbum, albums }) {
         <div className="form-container">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <h3>Album Form</h3>
+                    <h3>Add a new Album</h3>
                 </div>
                 <div>
                     <input
                         type="text"
                         name="name"
-                        placeholder="Album Name"
+                        placeholder="Name"
                         value={albumInfo.name}
                         onChange={handleChange}
                     />
@@ -55,7 +56,7 @@ function AlbumForm({ addAlbum, albums }) {
                 </div>
                 <div>
                     <br />
-                    <button>Submit new Album</button>
+                    <button id="albumformbutton">Submit</button>
                 </div>
             </form>
         </div>

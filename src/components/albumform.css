@@ -1,0 +1,18 @@
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgba(158, 151, 151, 0.591);
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+}
+
+button {
+    background-color: rgba(158, 151, 151, 0.591);
+    border-radius: 30px;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}

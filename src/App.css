@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap');
+
 * {
     box-sizing: border-box;
+	
   }
 
 body {
     background-color: #1c1c1c;
-    color: white;
+    color: rgb(78, 78, 78);
     padding: 40px;
     font-family: Arial;
     text-align: center;
@@ -13,16 +16,62 @@ body {
 	align-items: center;
 	margin: 50px 0;
 	width: 100%;
+	font-family: 'Poppins', sans-serif;
   }
 
+#maindiv{
+	background-color: #f6efef;
+	height: 85vh;
+	/* overflow:scroll; */
+	overflow-y: auto;
+	width: 60vh;
+	border-radius: 30px;
+	box-shadow: 1px 1px 1px 3px #00e39b;
+	border-radius:25px;
+	z-index:1;
+	transform-origin: 50% 50%;
+	animation-name: wobble;
+	animation-duration: 1000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+#maindiv:hover{
+	animation:none;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	border-radius: 30px;
+	background: transparent;
+	
+	
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 30px;
+	
+	
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: rgb(209, 209, 209); 
+	border-radius: 30px;
+	
+  }
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
 h2{
 	color:red;
 }
-button {
+#likebutton {
 	background-color: rgba(100, 100, 100, 0.721);
 	border: none;
 	color: rgb(30, 30, 30);
-	padding: 20px;
+	padding: 15px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -30,6 +79,78 @@ button {
 	margin: 4px 2px;
 	border-radius: 50%;
   }
+
+#playbutton {
+	background-color: rgba(100, 100, 100, 0.721);
+	border: none;
+	color: rgb(30, 30, 30);
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	margin: 4px 2px;
+	border-radius: 50%;
+}
+
+.album-list {
+	padding: 10px;
+}
+
+.card { 
+	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.card img {
+	align-self: center;
+	border-radius: 8px;
+}
   
+#albumformbutton{
+	background-color: rgb(0, 0, 0);
+    color: #00e39b;
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px 20px;
+    font-size:1.3rem;
+	width: 50%;
+
+}
+
+/* .speaker2{
+	height: 80vh;
+	width: 80vh;
+	background: rgb(121, 121, 121);
+	border-radius:50%;
+	opacity: 0.5;
+	z-index:-1;
+	position: absolute;
+	transform-origin: 50% 50%;
+	transform: translateX(50%);
+	transform: translateY(-50%);
+} 
+
+[class*="speaker2"] {
+
+	animation-name: speaker-on;
+	animation-duration: 400ms;
+	
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+  }
+  
+  &:after {
+	color: #a6e22e;
+	text-shadow: 0 0 10px #a6e22e;
+  } */
 
 
+@keyframes wobble  {
+  0%  { -webkit-transform:  rotate(0deg); }
+  20%  { -webkit-transform:  rotate(1deg); }
+  50%  { -webkit-transform:  rotate(-1deg); }
+  100%  { -webkit-transform:  rotate(0deg); }
+}
