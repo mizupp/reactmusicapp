@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Artist from "./components/Artist";
 import AlbumForm from './components/AlbumForm';
 import AlbumList from "./components/AlbumList";
@@ -9,6 +9,14 @@ import Speaker from "./components/Speaker";
 import { Routes ,Route } from 'react-router-dom';
 
 const App = (like, setLike) => {
+    const divRef = useRef(null);
+    
+    const scrollToTop = () => {
+      divRef.current.scroll({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
 
     const [albums, updateAlbums] = useState([]);
 
@@ -20,9 +28,12 @@ const App = (like, setLike) => {
     <>
        {/* <div class="speaker2" > </div> */}
 
-    <div id="maindiv">
-
-    <Speaker />
+    <div id="maindiv" ref={divRef}>
+    <button id="scrollbtn" type="button" onClick={() => scrollToTop()}>
+    ↑
+      </button>
+    <Speaker  />
+  
     <Navbar id="navbartop" />
             <Routes>
                 <Route exact path="/" element={<Welcome />} />
