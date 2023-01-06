@@ -28,13 +28,15 @@ const App = (like, setLike) => {
     <>
        {/* <div class="speaker2" > </div> */}
 
+<div id="wrap">
     <div id="maindiv" ref={divRef}>
+    <Navbar id="navbartop" />
+
     <button id="scrollbtn" type="button" onClick={() => scrollToTop()}>
     ↑
       </button>
     <Speaker  />
   
-    <Navbar id="navbartop" />
             <Routes>
                 <Route exact path="/" element={<Welcome />} />
                 <Route exact path="/albums" element={<AlbumList albums={albums} updateAlbums={updateAlbums} />} />
@@ -43,6 +45,7 @@ const App = (like, setLike) => {
     <div>
         {/* <Artist name="Random Artists Spotify" genre="Mix" intro="This is a really cool website where you can like stuff." /> */}
         {/* <AlbumList albums={albums} updateAlbums={updateAlbums} /> */}
+    </div>
     </div>
     </div>
     </>
