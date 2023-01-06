@@ -10,7 +10,7 @@ function AlbumItem({ album, updateAlbums }) {
 
     return (
         <div className="card" key={album.id}>
-            <img style={{ width: 150 ,height: 150 }} src={album.cover}></img>
+            <img id="albumcardimg" src={album.cover}></img>
             <div className="card-info">
                 <h3 className="card-name">{album.name}</h3>
                 <em>Release date: {album.release}</em>

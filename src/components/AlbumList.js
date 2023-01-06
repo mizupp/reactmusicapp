@@ -22,7 +22,7 @@ function AlbumList({ albums, updateAlbums }) {
     
 
     const [initialAlbums, setInitialAlbums] = useState([
-        {name: 'Kill-Bill', release: "2022", cover: "https://images.genius.com/ec5545d6bd431f045dc8db673b27546d.1000x1000x1.png"},
+        {name: 'Kill-Bill', release: "2022", cover: "https://images.genius.com/ec5545d6bd431f045dc8db673b27546d.1000x1000x1.png", mp3: ""},
         {name: 'Anti-Hero', release: "2022", cover: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Taylor_Swift_-_Anti-Hero.png/220px-Taylor_Swift_-_Anti-Hero.png"},
         {name: 'Calm-Down',release: "2022", cover: "https://cdns-images.dzcdn.net/images/cover/07d4291391724a969f243406cc92be66/500x500.jpg"},
         {name: 'Cuff-It', release: "2022",cover: "https://i1.sndcdn.com/artworks-s0zwEjnKsMB0-0-t500x500.jpg"},
