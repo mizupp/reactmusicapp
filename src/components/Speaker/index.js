@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import "./navstyles.css"
+import "../NavBar/navstyles.css"
 const Speaker = () => {
    
 //     const [scrollTop, setScrollTop] = React.useState(false);

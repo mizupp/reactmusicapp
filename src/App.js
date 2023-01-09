@@ -1,10 +1,12 @@
 import React, { useState, useRef } from 'react'
-import Artist from "./components/Artist";
-import AlbumForm from './components/AlbumForm';
-import AlbumList from "./components/AlbumList";
-import Navbar from "./components/NavBar";
-import Welcome from "./components/Welcome";
-import Speaker from "./components/Speaker";
+// import Artist from "./components/Artist";
+// import AlbumForm from './components/AlbumForm';
+// import AlbumList from "./components/AlbumList";
+// import Navbar from "./components/NavBar";
+// import Welcome from "./components/Welcome";
+// import Speaker from "./components/Speaker";
+
+import {AlbumForm, AlbumItem, AlbumList, Artist, NavBar, Speaker, Welcome} from './components/index';
 
 import { Routes ,Route } from 'react-router-dom';
 
@@ -30,7 +32,7 @@ const App = (like, setLike) => {
 
 <div id="wrap">
     <div id="maindiv" ref={divRef}>
-    <Navbar id="navbartop" />
+    <NavBar id="navbartop" />
 
     <button id="scrollbtn" type="button" onClick={() => scrollToTop()}>
     ↑

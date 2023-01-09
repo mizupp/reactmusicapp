@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import AlbumList from "./AlbumList";
+import AlbumList from "../AlbumList";
 
 const Welcome = ({ name, genre, intro }) => {
 

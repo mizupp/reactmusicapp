@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AlbumItem from "./AlbumItem";
+import AlbumItem from "../AlbumItem";
 // import Album from "./Album";
 
 function AlbumList({ albums, updateAlbums }) {
